@@ -115,7 +115,7 @@ button
 	min-width: 300px;
 }
 
-@media all and (max-width: 1120px) {
+@media all and (max-width: 1119px) {
 	 .services__right
 	 {
 		display: none;
