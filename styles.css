@@ -17,6 +17,11 @@ body {
 	min-width: 320px;
 }
 
+.centralContainer {
+	max-width: 1120px;
+	margin: 0 auto;
+}
+
 /*----Стили Хедера и верхнего навигационного меню----------------------------------------------------*/
 
 .menuNavigation {
@@ -48,7 +53,17 @@ body {
 	background: #eaeaea; 
 }
 
-@media all and (max-width: 768px) {
+button 
+{
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+@media all and (max-width: 767px) {
 	.menuNavigation__right div:nth-child(1), 
 	.menuNavigation__right div:nth-child(2),
 	.menuNavigation__right div:nth-child(3),
@@ -127,6 +142,12 @@ body {
 }
 
 .inline>a {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 25px;
+}
+
+.inline>button {
 	display: inline-block;
 	vertical-align: middle;
 	margin-right: 25px;
