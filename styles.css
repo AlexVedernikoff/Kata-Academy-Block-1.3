@@ -183,6 +183,11 @@ button
 
 /*----Стили горизонального меню со скроллингом-----------------------------------------------------------*/
 
+.menuScroll {
+	scrollbar-width: none;
+}
+
+
 .menuScroll ul {
 	list-style: none;
 	min-width: 320px;
@@ -193,11 +198,11 @@ button
 	overflow-x: scroll; 
 	overflow-y: hidden; 
 	scrollbar-width: none;
-	height: 50px;
+	height: 62px;
 	padding-left: 10px;
 }
 
-.menuScroll::-webkit-scrollbar {
+.menuScroll ul::-webkit-scrollbar {
   width: 0;
 }
 
