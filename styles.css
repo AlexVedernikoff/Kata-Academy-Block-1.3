@@ -1,0 +1,264 @@
+@font-face {
+        font-family: 'TT Lakes';
+        src: url('Assets/Fonts/TTLakes/TTLakes-Regular.ttf');
+        font-weight: normal;
+        font-style: normal;
+}
+@font-face {
+        font-family: 'TT Lakes';
+        src: url('Assets/Fonts/TTLakes/TTLakes-DemiBold.ttf');
+        font-weight: bold;
+        font-style: normal;
+}
+
+body {
+	font-family: 'TT Lakes';
+	background: #f8f8f8;
+	min-width: 320px;
+}
+
+.main-page {
+	max-width: 1120px;
+	margin: 0 auto;
+}
+
+/*----Стили Хедера и верхнего навигационного меню Nav----------------------------------------------------*/
+
+.nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: white;
+	min-width: 320px;
+	min-height: 85px;
+}
+
+.nav__burger {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	min-width: 160px;
+	margin-left: 5px;
+}
+
+.nav__burger img:nth-child(2) {
+	margin-bottom: 5px;
+}
+
+@media all and (min-width: 768px) {
+	.nav__burger button:nth-child(1)::after
+	 {
+		display: inline-block;
+		align-self: center;
+	    content: "";
+	    width: 2px;
+		height: 30px;
+		background: #eaeaea;
+		margin: 0 10px 5px 10px;
+	}
+}
+
+.nav ul {
+	list-style: none;
+}
+
+.nav__actions li:nth-child(4)::before {
+		display: inline-block;
+		align-self: center;
+	    content: "";
+	    width: 2px;
+		height: 30px;
+		background: #eaeaea;
+		margin: 0 20px 5px 10px;
+}
+
+
+.nav__actions {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	min-width: 280px;
+	margin-right: 15px;
+}
+
+
+.nav__button 
+{
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+@media all and (max-width: 767px) {
+	.nav__actions li:nth-child(1), 
+	.nav__actions li:nth-child(2),
+	.nav__actions li:nth-child(3) {
+		display: none;
+		/*visibility: hidden;*/
+	}	
+	.nav__actions {
+	min-width: 145px;
+	padding-left: 0;
+	}
+}
+
+@media all and (min-width: 1120px) {
+	 .nav
+	 {
+		display: none;
+		/*visibility: hidden;*/
+	}	
+}
+
+/*----------------------------------------------------------------------------------------------------*/
+
+/*--------Стили строки заголовка "Услуги и сервисы"---------------------------------------------------*/
+
+.services {
+	display: flex;
+	justify-content: space-between;
+	height: 55px;
+}
+
+.services__headline h1 {
+	font-size: 25px;
+	font-weight: bold;
+	font-style: normal;
+	margin-bottom: 5px;
+}
+
+.services__headline h1::before {
+	content: "";
+	display: inline-block;
+	vertical-align: middle;
+	background-image: url("Assets/Images/highlight.png"); 
+	background-repeat: no-repeat;
+	margin-right: 15px;
+	width: 4px;
+	height: 45px;
+}
+
+.services__actions {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	min-width: 300px;
+}
+
+@media all and (max-width: 1119px) {
+	 .services__actions
+	 {
+		display: none;
+		/*visibility: hidden;*/
+	}	
+}
+
+.services__actions_inline {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.services__actions_inline>span {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 8px;
+}
+
+.services__actions_inline>img {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 25px;
+}
+
+.services__actions_inline>button {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0;
+ 	border: none;
+    background-color: transparent;
+    cursor: pointer;
+	margin-right: 25px;
+}
+
+/*--------------------------------------------------------------------------------------------------------*/
+
+/*----Стили горизонального меню со скроллингом-----------------------------------------------------------*/
+
+.menu-scroll ul {
+	list-style: none;
+	min-width: 320px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: nowrap;
+	overflow-x: scroll; 
+	overflow-y: hidden; 
+	scrollbar-width: none;
+	height: 62px;
+	padding-left: 10px;
+}
+
+.menu-scroll ul::-webkit-scrollbar {
+  width: 0;
+}
+
+.menu-scroll ul li {
+	height: 31px;
+	flex-shrink: 0;
+	margin: 11px 5px 11px; 
+	padding: 7px 10px 0;
+}
+
+.menu-scroll ul li:nth-child(1) {
+	border: 2px solid #41f6d7;
+	border-radius: 4px;
+	background: white; 
+}
+
+.menu-scroll ul li:hover {
+	outline: 2px solid #41f6d7;
+	border-radius: 4px;
+}
+
+.menu-scroll a {
+	text-decoration: none;
+	color: black;
+	display: inline-block;
+	vertical-align: middle;
+}	
+
+/*----Оформляем основной раздел Main---------------------------------------------------------------------*/
+
+.main {
+	display: flex;
+}
+
+@media all and (max-width: 767px) {
+	.main {
+		display: flex;
+		flex-direction: column;
+	}	
+}
+
+.main__text-container {
+	height: 145px;
+	overflow: hidden;
+}
+
+.main__image-container img {
+	height: 200px;
+}
+
+.main__read-more {
+	padding: 0;
+ 	border: none;
+    background-color: transparent;
+    cursor: pointer;
+	padding: 20px;
+}
+
+.main__read-more>img {
+	display: inline-block;
+	vertical-align: middle;
+}
